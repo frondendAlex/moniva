@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
+    <title>Moniva</title>
+    <!-- Style -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Script -->
+    <script src="js/jquery-3.6.0.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" defer></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" defer></script>
+    <script src="js/swiper-bundle.min.js" defer></script>
+    <script src="js/lazyload.js" defer></script>
+    <script src="js/main.js" defer></script>
+
+    <style>
+        img[data-src] {
+            opacity: 0 !important;
+        }
+    
+        img[data-src] {
+            opacity: 1 !important;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header header-home">
+        <div class="container header-container">
+            <div class="header__row">
+
+                <div class="header__column">
+                    <div class="header__item">
+                        <img class="header__img" data-src="images/icon/header__logotip-header.png" alt="Логотип">
+                    </div>
+                </div>
+
+                <div class="header__column">
+                    <div class="header__item">
+                        <div class="header__content">
+                            <nav class="header__menu">
+                                <ul class="header__menu-list">
+                                    <li class="header__menu-item">
+                                        <a class="header__menu-link" href="#">Главная</a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a class="header__menu-link" href="#">Каталог</a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a class="header__menu-link" href="#">О компании</a>
+                                    </li>
+
+                                    <li class="header__menu-item">
+                                        <a class="header__menu-link" href="#">Сотруднечество</a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a class="header__menu-link" href="#">Где купить</a>
+                                    </li>
+                                    <li class="header__menu-item">
+                                        <a class="header__menu-link" href="#">Личный кабинет</a>
+                                    </li>
+                                </ul>
+
+                                <div class="header__contact-mob">
+                                    <a class="header__contact-mob-tel" href="tel:+71234567890">+7 123 456 7890</a>
+                                    <a class="header__contact-mob-email" href="">info@moniva.ru</a>
+                                    <span class="header__contact-mob-time">ПН-ВС: с 9:00 до 18:00</span>
+                                </div>
+                            </nav>
+                            
+                            <form class="header__form" action="#" method="POST">
+                                <div class="header__form-item">
+                                    <input class="header__form-search" type="search"
+                                        placeholder="Введите название продукта">
+                                </div>
+                                <div class="header__form-item">
+                                    <button class="header__form-btn btn">Найти</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header__column">
+                    <div class="header__item">
+                        <div class="header__contact">
+                            <a class="header__contact-tel" href="tel:+71234567890">+7 123 456 7890</a>
+                            <a class="header__contact-mail" href="maito:info@moniva.ru">info@moniva.ru</a>
+                            <div class="header__contact-time">ПН-ВС: с 9:00 до 18:00</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header__column">
+                    <div class="header__item">
+                        <div class="header__mob-wrap">
+                            <div class="header__mob-contact">
+                                <a href="tel:+71234567890">
+                                    <img data-src="images/icon/icon__tel-mob.svg" alt="Телефон иконка">
+                                </a>
+                            </div>
+                            <a class="header__bascet" href="#">
+                                <img class="header__bascet-icon" data-src="images/icon/icon__bascet.svg" alt="Корзина">
+                                <span>Корзина</span>
+                            </a>
+                            <a class="header__fixed-tel" href="tel:+71234567890">
+                                <img data-src="images/icon/icon__tel-fixed.png" alt="Телефон">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="burger">
+                    <button class="burger__menu">Меню</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section section-intro" style="background-image: url(images/bg/header__bg.webp)" data-bg="images/bg/header__bg.jpg" data-bg-webp="images/bg/header__bg.webp">
+        <div class="container">
+            <div class="intro">
+                <div class="intro__content">
+                    <div class="intro__content-item">
+                        <div class="intro__content-text">
+                            <p>Moniva - европейский производитель тормозных механизмов и деталей подвески
+                                премиум-качества для коммерческих MERSEDES, SCANIA, VOLVO, MAN, DAF, IVECO, RENAULT</p>
+                        </div>
+                    </div>
+                    <div class="intro__content-item">
+                        <h1 class="intro__content-title">
+                            Получите 100% качества и ресурса за 50% от цены оригинала. <br> <span>Лучшее соотношение
+                                «рубль на километр» при минимальных рисках!</span>
+                        </h1>
+                    </div>
+                </div>
+
+                <form class="intro__form" action="#" method="POST">
+                    <div class="intro__form-item">
+                        <div class="intro__form-text">
+                            Оставьте заявку сейчас и получите особые условия для оптовых покупателей
+                        </div>
+                    </div>
+                    <div class="intro__form-item">
+                        <input class="intro__form-input" name="name" type="text" placeholder="Имя">
+                    </div>
+                    <div class="intro__form-item">
+                        <input id="phone_1" class="intro__form-input" name="phone" type="tel" placeholder="Телефон">
+                    </div>
+                    <div class="intro__form-item">
+                        <button class="intro__form-btn btn" type="button">Получить расчет</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-ourproducts">
+        <div class="container">
+            <div class="ourproducts">
+                <div class="ourproducts__desc">
+                    <div class="ourproducts__desc-item">
+                        <div class="ourproducts__desc-text">
+                            Наша продукция:
+                        </div>
+                    </div>
+                    <div class="ourproducts__desc-decor"></div>
+                    <div class="ourproducts__desc-item ourproducts__desc-right">
+                        <a class="ourproducts__desc-link" href="#">В каталог</a>
+                    </div>
+                </div>
+
+                <div class="ourproducts__system">
+                    <div class="ourproducts__system-top system__top">
+                        <div class="system__top-row">
+                            <div class="system__top-column">
+                                <div class="system__top-header">
+                                    <img class="system__top-icon" data-src="images/ourproducts/icon__disc.svg" alt="Диск">
+                                    <h3 class="system__top-title title">Тормозная <br> система</h3>
+                                </div>
+                            </div>
+                            <div class="system__top-right">
+                                <div class="system__top-right-column">
+                                    <div class="system__top-item">
+                                        <picture>
+                                            <source srcset="images/ourproducts/system/system1.webp" type="image/webp">
+                                                <img data-src="images/ourproducts/system/system1.png" alt="">
+                                        </picture>
+                                        <div class="system__top-text">Энерго-аккумуляторы</div>
+                                    </div>
+                                </div>
+                                <div class="system__top-right-column">
+                                    <div class="system__top-item">
+                                        <picture>
+                                            <source srcset="images/ourproducts/system/system2.webp" type="image/webp">
+                                            <img data-src="images/ourproducts/system/system2.png" alt="">
+                                        </picture>
+                                        <div class="system__top-text">Тормозные барабаны</div>
+                                    </div>
+                                </div>
+                                <div class="system__top-right-column">
+                                    <div class="system__top-item">
+                                        <picture>
+                                            <source srcset="images/ourproducts/system/system3.webp" type="image/webp">
+                                            <img data-src="images/ourproducts/system/system3.png" alt="">
+                                        </picture>
+                                        <div class="system__top-text">Тормозные диски</div>
+                                    </div>
+                                </div>
+                                <div class="system__top-right-column">
+                                    <div class="system__top-item">
+                                        <picture>
+                                            <source srcset="images/ourproducts/system/system4.webp" type="image/webp">
+                                            <img data-src="images/ourproducts/system/system4.png" alt="">
+                                        </picture>
+                                        <div class="system__top-text">Тормозные камеры</div>
+                                    </div>
+                                </div>
+                                <div class="system__top-right-column">
+                                    <div class="system__top-item">
+                                        <picture>
+                                            <source srcset="images/ourproducts/system/system5.webp" type="image/webp">
+                                            <img data-src="images/ourproducts/system/system5.png" alt="">
+                                        </picture>
+                                        <div class="system__top-text">Тормозные колодки</div>
+                                    </div>
+                                </div>
+                                <div class="system__top-right-column">
+                                    <div class="system__top-item">
+                                        <picture>
+                                            <source srcset="images/ourproducts/system/system6.webp" type="image/webp">
+                                            <img data-src="images/ourproducts/system/system6.png" alt="">
+                                        </picture>
+                                        <div class="system__top-text">Тормозные колодки комплект</div>
+                                    </div>
+                                </div>
+                                <div class="system__top-right-column">
+                                    <div class="system__top-item">
+                                        <picture>
+                                            <source srcset="images/ourproducts/system/system7.webp" type="image/webp">
+                                            <img data-src="images/ourproducts/system/system7.png" alt="">
+                                        </picture>
+                                        <div class="system__top-text">Тормозные накладки</div>
+                                    </div>
+                                </div>
+                                <div class="system__top-right-column">
+                                    <div class="system__top-item">
+                                        <picture>
+                                            <source srcset="images/ourproducts/system/system8.webp" type="image/webp">
+                                            <img data-src="images/ourproducts/system/system8.png" alt="">
+                                        </picture>
+                                        <div class="system__top-text">Тормозные рычаги трещетки</div>
+                                    </div>
+                                </div>
+                                <div class="system__top-right-column">
+                                    <div class="system__top-item">
+                                        <picture>
+                                            <source srcset="images/ourproducts/system/system9.webp" type="image/webp">
+                                            <img data-src="images/ourproducts/system/system9.png" alt="">
+                                        </picture>
+                                        <div class="system__top-text">РМК суппорта</div>
+                                    </div>
+                                </div>
+                                <div class="system__top-right-column">
+                                    <div class="system__top-item">
+                                        <picture>
+                                            <source srcset="images/ourproducts/system/system10.webp" type="image/webp">
+                                            <img data-src="images/ourproducts/system/system10.png" alt="">
+                                        </picture>
+                                        <div class="system__top-text">РМК вала</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ourproducts__system-botom system-botom">
+                        <div class="system-botom-row">
+                            <div class="system__top-header">
+                                <img class="system__top-icon" data-src="images/ourproducts/icon__disc.svg" alt="Диск">
+                                <h3 class="system__top-title title">Ходовая <br> система</h3>
+                            </div>
+                            <div class="system__top-left-row">
+                                <div class="system__top-left">
+
+                                    <div class="system__top-left-column">
+                                        <div class="system__top-item">
+                                            <picture>
+                                                <source srcset="images/ourproducts/system/system11.webp" type="image/webp">
+                                                <img data-src="images/ourproducts/system/system11.png" alt="">
+                                            </picture>
+                                            <div class="system__top-text">Цилиндры
+                                                сцепления </div>
+                                        </div>
+                                    </div>
+                                    <div class="system__top-left-column">
+                                        <div class="system__top-item">
+                                            <picture>
+                                                <source srcset="images/ourproducts/system/system12.webp" type="image/webp">
+                                                <img data-src="images/ourproducts/system/system12.png" alt="">
+                                            </picture>
+                                            <div class="system__top-text">Резино-металли-
+                                                ческие изделия</div>
+                                        </div>
+                                    </div>
+                                    <div class="system__top-left-column">
+                                        <div class="system__top-item">
+                                            <picture>
+                                                <source srcset="images/ourproducts/system/system13.webp" type="image/webp">
+                                                <img data-src="images/ourproducts/system/system13.png" alt="">
+                                            </picture>
+                                            <div class="system__top-text">РМК цилиндра сцепления</div>
+                                        </div>
+                                    </div>
+                                    <div class="system__top-left-column">
+                                        <div class="system__top-item">
+                                            <picture>
+                                                <source srcset="images/ourproducts/system/system14.webp" type="image/webp">
+                                                <img data-src="images/ourproducts/system/system14.png" alt="">
+                                            </picture>
+                                            <div class="system__top-text">Ступицы</div>
+                                        </div>
+                                    </div>
+                                    <div class="system__top-left-column">
+                                        <div class="system__top-item">
+                                            <picture>
+                                                <source srcset="images/ourproducts/system/system15.webp" type="image/webp">
+                                                <img data-src="images/ourproducts/system/system15.png" alt="">
+                                            </picture>
+                                            <div class="system__top-text">Элементы трансмиссии</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="system__bottom-right">
+                                    <div class="system__bottom-right-img">
+                                        <picture>
+                                            <source srcset="images/ourproducts/model.webp" type="image/webp">
+                                            <img data-src="images/ourproducts/model.png" alt="">
+                                        </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-popular">
+        <div class="container">
+            <div class="popular">
+                <div class="popular__header">
+                    <h3 class="popular__header-title title">
+                        Сравните цены на ТОП-30 популярных автозапчастей
+                    </h3>
+                </div>
+
+                <div class="popular__row">
+                    <div class="swiper-container swiper-popular">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="popular__column">
+                                    <div class="popular__slider">
+                                        <div class="popular__desc">Тормозной барабан MAN 001.002.003</div>
+                                        <div class="popular__foto-wrap">
+                                            <div class="popular__foto-item">
+                                                <div class="popular__foto-text">Moniva</div>
+                                                <div class="popular__foto-img">
+                                                    <img data-src="images/bg/header__bg.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="popular__foto-item">
+                                                <div class="popular__foto-text">Original</div>
+                                                <div class="popular__foto-img">
+                                                    <picture>
+                                                        <source srcset="images/popular/popular2.webp" type="image/webp">
+                                                        <img data-src="images/popular/popular2.jpg" alt="">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="popular__price">
+                                            <div class="popular__price-item">
+                                                <span class="popular__price-text">Розничная стоимость</span>
+                                                <span class="popular__price-cena">25 000 р</span>
+                                            </div>
+                                            <div class="popular__price-item">
+                                                <span class="popular__price-text">Розничная стоимость</span>
+                                                <span class="popular__price-cena">50 000 р</span>
+                                            </div>
+                                            <div class="popular__price-sale">
+                                                <span>50%</span>
+                                            </div>
+                                        </div>
+                                        <div class="popular__price popular__service">
+                                            <div class="popular__price-item popular__service-item">
+                                                <span class="popular__price-text popular__service-text">Розничная
+                                                    стоимость</span>
+                                                <span class="popular__price-cena popular__service-km">10 000 км</span>
+                                            </div>
+                                            <div class="popular__price-item popular__service-item">
+                                                <span class="popular__price-text popular__service-text">Розничная
+                                                    стоимость</span>
+                                                <span class="popular__price-cena popular__service-km">10 000 км</span>
+                                            </div>
+                                        </div>
+                                        <div class="popular__link-wrap">
+                                            <a class="popular__link" href="#">Сравнить в рознице</a>
+                                            <a class="popular__link" href="#">Сравнить в рознице</a>
+                                        </div>
+                                        <div class="popular__btn-wrap">
+                                            <button class="popular__btn btn">Сравнить в рознице</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="popular__column">
+                                    <div class="popular__slider">
+                                        <div class="popular__desc">Тормозной барабан MAN 001.002.003</div>
+                                        <div class="popular__foto-wrap">
+                                            <div class="popular__foto-item">
+                                                <div class="popular__foto-text">Moniva</div>
+                                                <div class="popular__foto-img">
+                                                    <picture>
+                                                        <source srcset="images/popular/popular2.webp" type="image/webp">
+                                                        <img data-src="images/popular/popular2.jpg" alt="">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="popular__foto-item">
+                                                <div class="popular__foto-text">Original</div>
+                                                <div class="popular__foto-img">
+                                                    <picture>
+                                                        <source srcset="images/popular/popular2.webp" type="image/webp">
+                                                        <img data-src="images/popular/popular2.jpg" alt="">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="popular__price">
+                                            <div class="popular__price-item">
+                                                <span class="popular__price-text">Розничная стоимость</span>
+                                                <span class="popular__price-cena">25 000 р</span>
+                                            </div>
+                                            <div class="popular__price-item">
+                                                <span class="popular__price-text">Розничная стоимость</span>
+                                                <span class="popular__price-cena">50 000 р</span>
+                                            </div>
+                                            <div class="popular__price-sale">
+                                                <span>50%</span>
+                                            </div>
+                                        </div>
+                                        <div class="popular__price popular__service">
+                                            <div class="popular__price-item popular__service-item">
+                                                <span class="popular__price-text popular__service-text">Розничная
+                                                    стоимость</span>
+                                                <span class="popular__price-cena popular__service-km">10 000 км</span>
+                                            </div>
+                                            <div class="popular__price-item popular__service-item">
+                                                <span class="popular__price-text popular__service-text">Розничная
+                                                    стоимость</span>
+                                                <span class="popular__price-cena popular__service-km">10 000 км</span>
+                                            </div>
+                                        </div>
+                                        <div class="popular__link-wrap">
+                                            <a class="popular__link" href="#">Сравнить в рознице</a>
+                                            <a class="popular__link" href="#">Сравнить в рознице</a>
+                                        </div>
+                                        <div class="popular__btn-wrap">
+                                            <button class="popular__btn btn">Сравнить в рознице</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="popular__column">
+                                    <div class="popular__slider">
+                                        <div class="popular__desc">Тормозной барабан MAN 001.002.003</div>
+                                        <div class="popular__foto-wrap">
+                                            <div class="popular__foto-item">
+                                                <div class="popular__foto-text">Moniva</div>
+                                                <div class="popular__foto-img">
+                                                    <picture>
+                                                        <source srcset="images/popular/popular2.webp" type="image/webp">
+                                                        <img data-src="images/popular/popular2.jpg" alt="">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="popular__foto-item">
+                                                <div class="popular__foto-text">Original</div>
+                                                <div class="popular__foto-img">
+                                                    <picture>
+                                                        <source srcset="images/popular/popular2.webp" type="image/webp">
+                                                        <img data-src="images/popular/popular2.jpg" alt="">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="popular__price">
+                                            <div class="popular__price-item">
+                                                <span class="popular__price-text">Розничная стоимость</span>
+                                                <span class="popular__price-cena">25 000 р</span>
+                                            </div>
+                                            <div class="popular__price-item">
+                                                <span class="popular__price-text">Розничная стоимость</span>
+                                                <span class="popular__price-cena">50 000 р</span>
+                                            </div>
+                                            <div class="popular__price-sale">
+                                                <span>50%</span>
+                                            </div>
+                                        </div>
+                                        <div class="popular__price popular__service">
+                                            <div class="popular__price-item popular__service-item">
+                                                <span class="popular__price-text popular__service-text">Розничная
+                                                    стоимость</span>
+                                                <span class="popular__price-cena popular__service-km">10 000 км</span>
+                                            </div>
+                                            <div class="popular__price-item popular__service-item">
+                                                <span class="popular__price-text popular__service-text">Розничная
+                                                    стоимость</span>
+                                                <span class="popular__price-cena popular__service-km">10 000 км</span>
+                                            </div>
+                                        </div>
+                                        <div class="popular__link-wrap">
+                                            <a class="popular__link" href="#">Сравнить в рознице</a>
+                                            <a class="popular__link" href="#">Сравнить в рознице</a>
+                                        </div>
+                                        <div class="popular__btn-wrap">
+                                            <button class="popular__btn btn">Сравнить в рознице</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="popular__column">
+                                    <div class="popular__slider">
+                                        <div class="popular__desc">Тормозной барабан MAN 001.002.003</div>
+                                        <div class="popular__foto-wrap">
+                                            <div class="popular__foto-item">
+                                                <div class="popular__foto-text">Moniva</div>
+                                                <div class="popular__foto-img">
+                                                    <picture>
+                                                        <source srcset="images/popular/popular2.webp" type="image/webp">
+                                                        <img data-src="images/popular/popular2.jpg" alt="">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="popular__foto-item">
+                                                <div class="popular__foto-text">Original</div>
+                                                <div class="popular__foto-img">
+                                                    <picture>
+                                                        <source srcset="images/popular/popular2.webp" type="image/webp">
+                                                        <img data-src="images/popular/popular2.jpg" alt="">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="popular__price">
+                                            <div class="popular__price-item">
+                                                <span class="popular__price-text">Розничная стоимость</span>
+                                                <span class="popular__price-cena">25 000 р</span>
+                                            </div>
+                                            <div class="popular__price-item">
+                                                <span class="popular__price-text">Розничная стоимость</span>
+                                                <span class="popular__price-cena">50 000 р</span>
+                                            </div>
+                                            <div class="popular__price-sale">
+                                                <span>50%</span>
+                                            </div>
+                                        </div>
+                                        <div class="popular__price popular__service">
+                                            <div class="popular__price-item popular__service-item">
+                                                <span class="popular__price-text popular__service-text">Розничная
+                                                    стоимость</span>
+                                                <span class="popular__price-cena popular__service-km">10 000 км</span>
+                                            </div>
+                                            <div class="popular__price-item popular__service-item">
+                                                <span class="popular__price-text popular__service-text">Розничная
+                                                    стоимость</span>
+                                                <span class="popular__price-cena popular__service-km">10 000 км</span>
+                                            </div>
+                                        </div>
+                                        <div class="popular__link-wrap">
+                                            <a class="popular__link" href="#">Сравнить в рознице</a>
+                                            <a class="popular__link" href="#">Сравнить в рознице</a>
+                                        </div>
+                                        <div class="popular__btn-wrap">
+                                            <button class="popular__btn btn">Сравнить в рознице</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="popular__column">
+                                    <div class="popular__slider">
+                                        <div class="popular__desc">Тормозной барабан MAN 001.002.003</div>
+                                        <div class="popular__foto-wrap">
+                                            <div class="popular__foto-item">
+                                                <div class="popular__foto-text">Moniva</div>
+                                                <div class="popular__foto-img">
+                                                    <picture>
+                                                        <source srcset="images/popular/popular2.webp" type="image/webp">
+                                                        <img data-src="images/popular/popular2.jpg" alt="">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <div class="popular__foto-item">
+                                                <div class="popular__foto-text">Original</div>
+                                                <div class="popular__foto-img">
+                                                    <picture>
+                                                        <source srcset="images/popular/popular2.webp" type="image/webp">
+                                                        <img data-src="images/popular/popular2.jpg" alt="">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="popular__price">
+                                            <div class="popular__price-item">
+                                                <span class="popular__price-text">Розничная стоимость</span>
+                                                <span class="popular__price-cena">25 000 р</span>
+                                            </div>
+                                            <div class="popular__price-item">
+                                                <span class="popular__price-text">Розничная стоимость</span>
+                                                <span class="popular__price-cena">50 000 р</span>
+                                            </div>
+                                            <div class="popular__price-sale">
+                                                <span>50%</span>
+                                            </div>
+                                        </div>
+                                        <div class="popular__price popular__service">
+                                            <div class="popular__price-item popular__service-item">
+                                                <span class="popular__price-text popular__service-text">Розничная
+                                                    стоимость</span>
+                                                <span class="popular__price-cena popular__service-km">10 000 км</span>
+                                            </div>
+                                            <div class="popular__price-item popular__service-item">
+                                                <span class="popular__price-text popular__service-text">Розничная
+                                                    стоимость</span>
+                                                <span class="popular__price-cena popular__service-km">10 000 км</span>
+                                            </div>
+                                        </div>
+                                        <div class="popular__link-wrap">
+                                            <a class="popular__link" href="#">Сравнить в рознице</a>
+                                            <a class="popular__link" href="#">Сравнить в рознице</a>
+                                        </div>
+                                        <div class="popular__btn-wrap">
+                                            <button class="popular__btn btn">Сравнить в рознице</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-premium" style="background-image: url(images/bg/premium__bg.webp)" data-bg="images/bg/premium__bg.jpg" data-bg-webp="images/bg/premium__bg.webp">
+        <div class="container">
+            <div class="premium">
+                <div class="premium__header">
+                    <h3 class="premium__header-title">
+                        Премиум качество + безопасность = <span>moniva</span>
+                    </h3>
+                </div>
+            </div>
+            <div class="premium__row">
+                <div class="premium__column">
+                    <div class="premium__item">
+                        <div class="premium__img">
+                            <picture>
+                                <source srcset="images/premium/premium1.webp" type="image/webp">
+                                <img data-src="images/premium/premium1.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="premium__text">
+                            <p><span>Сертификат 150 9001:2015,</span> международный стандарт системы менеджмента
+                                качества</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="premium__column">
+                    <div class="premium__item">
+                        <div class="premium__img">
+                            <picture>
+                                <source srcset="images/premium/premium2.webp" type="image/webp">
+                                <img data-src="images/premium/premium2.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="premium__text">
+                            <p><span>Фамилия основателя</span> на каждой детали</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="premium__column">
+                    <div class="premium__item">
+                        <div class="premium__img">
+                            <picture>
+                                <source srcset="images/premium/premium3.webp" type="image/webp">
+                                <img data-src="images/premium/premium3.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="premium__text">
+                            <p>Фамилия основателя Тормозные диски и колодки с накладками сертифицированы по
+                                <span>европейскому стандарту ЕСЕ Р-90</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="premium__column">
+                    <div class="premium__item">
+                        <div class="premium__img">
+                            <picture>
+                                <source srcset="images/premium/premium4.webp" type="image/webp">
+                                <img data-src="images/premium/premium4.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="premium__text">
+                            <p>Товарную группу <span>тестируем в суровых условиях</span> в Нижневартовске</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="premium__column">
+                    <div class="premium__item">
+                        <div class="premium__img">
+                            <picture>
+                                <source srcset="images/premium/premium5.webp" type="image/webp">
+                                <img data-src="images/premium/premium5.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="premium__text">
+                            <p>Используем <span>японское и европейское</span> оборудование</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="premium__column">
+                    <div class="premium__item">
+                        <div class="premium__img">
+                            <picture>
+                                <source srcset="images/premium/premium6.webp" type="image/webp">
+                                <img data-src="images/premium/premium6.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="premium__text">
+                            <p>Периодически сдаем продукцию на независимую проверку. <span>Каждые 2 года сертификат
+                                    качества продлевается</span> по каждой товарной позиции</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-delivery" style="background-image: url(images/bg/delivery__bg.webp)" data-bg="images/bg/delivery__bg.jpg" data-bg-webp="images/bg/delivery__bg.webp">
+        <div class="container">
+            <div class="delivery">
+                <div class="delivery__header">
+                    <h3 class="delivery__header-title title">
+                        Оперативная доставка по России и СНГ
+                    </h3>
+                </div>
+
+                <div class="delivery__row">
+                    <div class="delivery__column-img">
+                        <div class="delivery__img">
+                            <picture>
+                                <source srcset="images/delivery/delivery__zil.webp" type="image/webp">
+                                <img data-src="images/delivery/delivery__zil.png" alt="">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="delivery__column-content">
+                        <div class="delivery__content">
+                            <div class="delivery__content-item">
+                                <div class="delivery__content-text">
+                                    <p>Большинство ходовых позиций всегда в наличиина складе</p>
+                                </div>
+                            </div>
+                            <div class="delivery__content-item">
+                                <div class="delivery__content-text">
+                                    <p>Ознакомиться с товаром можно на складе в Лобне</p>
+                                </div>
+                            </div>
+                            <div class="delivery__content-item">
+                                <div class="delivery__content-text">
+                                    <p>Отправка со склада в Москве в день оплаты</p>
+                                </div>
+                            </div>
+                            <div class="delivery__content-item">
+                                <div class="delivery__content-text">
+                                    <p>Возможны срочные поставки с завода в экстренных в ситуациях (авиапочта, от 5 до
+                                        10 дней).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-guarantee" style="background-image: url(images/bg/guarantee__bg.webp)" data-bg="images/bg/guarantee__bg.jpg" data-bg-webp="images/bg/guarantee__bg.webp">
+        <div class="container">
+            <div class="guarantee">
+                <div class="guarantee__header">
+                    <div class="guarantee__header-subtitle">
+                        Отработаем рекламацию по запчастям за 3 дня
+                    </div>
+                    <h3 class="guarantee__header-title title">
+                        Гарантия <span>1 год</span> или <span>100 000 км</span>
+                    </h3>
+                    <div class="guarantee__header-text">
+                        С нами вы можете быть уверены в результатах
+                    </div>
+                </div>
+
+                <div class="guarantee__row">
+                    <div class="guarantee__column">
+                        <div class="guarantee__item ">
+                            <div class="guarantee__item-icon">
+                                <img data-src="images/guarantee/guarantee1.svg" alt="">
+                            </div>
+                            <div class="guarantee__item-text">
+                                Получаем<br> видеодоказательство
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guarantee__column">
+                        <div class="guarantee__item">
+                            <div class="guarantee__item-icon">
+                                <img data-src="images/guarantee/guarantee2.svg" alt="">
+                            </div>
+                            <div class="guarantee__item-text">
+                                Меняем<br> деталь
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="guarantee__column">
+                        <div class="guarantee__item">
+                            <div class="guarantee__item-icon">
+                                <img data-src="images/guarantee/guarantee3.svg" alt="">
+                            </div>
+                            <div class="guarantee__item-text">
+                                Разбираемся в<br> проблеме
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guarantee__text">
+                    <p>Мы знаем Ваш бизнес, и знаем, что простой и обязательства сильно дороже себестоимости детали</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-ecosystem" style="background-image: url(images/bg/ecosystem__bg.webp)" data-bg="images/bg/ecosystem__bg.jpg" data-bg-webp="images/bg/ecosystem__bg.webp">
+        <div class="container">
+            <div class="ecosystem">
+                <div class="ecosystem__row">
+                    <div class="ecosystem__up">
+                        <div class="ecosystem__item ecosystem__item-up">
+                            <h5 class="ecosystem__up-text">Экосистема<br> Moniva</h5>
+                        </div>
+                    </div>
+
+                    <div class="ecosystem__info">
+                        <ul class="ecosystem__info-list">
+                            <li class="ecosystem__info-item">
+                                <div class="ecosystem__info-number">55</div>
+                                <div class="ecosystem__info-text">Лет на рынке</div>
+                            </li>
+                            <li class="ecosystem__info-item">
+                                <div class="ecosystem__info-number">11 000 М²</div>
+                                <div class="ecosystem__info-text">Площадь собственного производства</div>
+                            </li>
+                            <li class="ecosystem__info-item">
+                                <div class="ecosystem__info-number">100 стран²</div>
+                                <div class="ecosystem__info-text">Экспортируем продукцию по всему миру</div>
+                            </li>
+                            <li class="ecosystem__info-item">
+                                <div class="ecosystem__info-number">> 2000</div>
+                                <div class="ecosystem__info-text">Позиций в нашем ассортименте</div>
+                            </li>
+                            <li class="ecosystem__info-item">
+                                <div class="ecosystem__info-number">0,07%</div>
+                                <div class="ecosystem__info-text">Процент брака</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="ecosystem__bottom">
+                        <div class="ecosystem__item ecosystem__item-bottom">
+                            <address class="ecosystem__text ecosystem__bottom-text">Konya Organize Sanayi Bölgesi
+                                Küçükyıldız Sokak No:6 PK.42050 Selçuklu/ Konya/ TURKEY</address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-advantages">
+        <div class="container">
+            <div class="advantages">
+                <div class="advantages__header">
+                    <p class="advantages__header-text">Будем рады сотрудничеству с вами</p>
+                    <h3 class="advantages__header-title title">
+                        Узнайте преимущества взаимодеиствия для:
+                    </h3>
+                </div>
+                <div class="advantages__row">
+                    <div class="advantages__column">
+                        <div class="advantages__item">
+                            <div class="advantages__img">
+                                <picture>
+                                    <source srcset="images/advantages/advantages1.webp" type="image/webp">
+                                    <img data-src="images/advantages/advantages1.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="advantages__content">
+                                <div class="advantages__content-text">Автопарка</div>
+                                <a class="advantages__content-link btn" href="#"><span>Подробнее</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="advantages__column">
+                        <div class="advantages__item">
+                            <div class="advantages__img">
+                                <picture>
+                                    <source srcset="images/advantages/advantages2.webp" type="image/webp">
+                                    <img data-src="images/advantages/advantages2.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="advantages__content">
+                                <div class="advantages__content-text">Магазин</div>
+                                <a class="advantages__content-link btn" href="#"><span>Подробнее</span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="advantages__column">
+                        <div class="advantages__item">
+                            <div class="advantages__img">
+                                <picture>
+                                    <source srcset="images/advantages/advantages3.webp" type="image/webp">
+                                    <img data-src="images/advantages/advantages3.jpg" alt="">
+                                </picture>
+                            </div>
+                            <div class="advantages__content">
+                                <div class="advantages__content-text">Розничной сети</div>
+                                <a class="advantages__content-link btn" href="#"><span>Подробнее</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-client">
+        <div class="container">
+            <div class="client">
+                <div class="client__row">
+                    <div class="swiper-container swiper-client">
+                        <div class="client__header">
+                            <h5 class="client__header-text">Наши клиенты</h5>
+                            <div class="client__header-line"></div>
+                        </div>
+                        <div class="swiper-wrapper client__wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="client__column">
+                                    <img data-src="images/client/client1.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="client__column">
+                                    <img data-src="images/client/client2.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="client__column">
+                                    <img data-src="images/client/client3.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="client__column">
+                                    <img data-src="images/client/client4.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="client__column">
+                                    <img data-src="images/client/client5.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="client__column">
+                                    <img data-src="images/client/client1.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="client__column">
+                                    <img data-src="images/client/client2.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="client__column">
+                                    <img data-src="images/client/client3.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="client__column">
+                                    <img data-src="images/client/client4.png" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-application" style="background-image: url(images/bg/application__bg.webp)" data-bg="images/bg/application__bg.jpg" data-bg-webp="images/bg/application__bg.webp">
+        <div class="container">
+            <div class="application">
+                <div class="application__row">
+                    <div class="application__left">
+                        <div class="application__header">
+                            <h3 class="application__header-title">Оставьте заявку прямо сейчас </h3>
+                            <div class="application__header-text">
+                                <p>и получите расчет автозапчастей под вашу задачу</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="application__right">
+                        <form class="application__form" method="POST">
+                            <div class="application__form-header">
+                                <div class="application__form-header-row">
+                                    <div class="application__form-item">
+                                        <input class="application__form-input" name="name" type="text" placeholder="Имя" required>
+                                    </div>
+                                    <div class="application__form-item">
+                                        <input id="phone_2" class="application__form-input" type="tel" placeholder="Телефон" required>
+                                    </div>
+                                    <div class="application__form-item">
+                                        <input class="application__form-input application__form-input-file"
+                                            id="input__file" type="file">
+                                        <label class="application__form-input application__form-input-file-button"
+                                            for="input__file">
+                                            <span class="application__form-input-file-text">Приложить файл</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="application__form-bottom">
+                                <div class="application__form-bottom-row">
+                                    <div class="application__form-bottom-column">
+                                        <button class="application__form-btn btn">Получить рассчет</button>
+                                    </div>
+
+                                    <label class="application__form-bottom-label" for="checktext">
+                                        <input class="application__form-checkbox" type="checkbox" id="checktext">
+                                        <label for="checktext"></label>
+                                        <span class="application__form-text">Нажимая на кнопку “Получить рассчет” я соглашаюсь с <a class="application__form-text-link" href="#">политикой конфидициальности.</a></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-feedback">
+        <div class="container">
+            <div class="feedback">
+                <div class="feedback__row">
+                    <div class="swiper-container swiper-feedback">
+                        <div class="feedback__wrap">
+                            <div class="feedback__header">
+                                <h3 class="feedback__header-title title">
+                                    Наши запчасти прошли <span>миллионы километров</span> на технике наших клиентов и
+                                    вот что они говорят
+                                </h3>
+                            </div>
+                            <div class="feedback__header-left">
+                                <div class="feedback__header-left-text">Отзывы</div>
+                                <div class="feedback__header-left-line"></div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-wrapper feedback__wrapper">
+                            <div class="swiper-slide">
+                                <div class="feedback__content">
+                                    <div class="feedback__content-item">
+                                        <div class="feedback__content-img">
+                                            <img data-src="images/feedback/feedback1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="feedback__content-item">
+                                        <div class="feedback__content-top">
+                                            <span class="feedback__content-name">Алексей Иванов</span>
+                                            <span class="feedback__content-prof">ПАО “Голубой свет”</span>
+                                        </div>
+
+                                        <div class="feedback__content-text">
+                                            <p>“В частности, понимание сути ресурсосберегающих технологий прекрасно
+                                                подходит для реализации стандартных подходов. “</p>
+                                            <p>Господа, повышение уровня гражданского сознания способствует подготовке и
+                                                реализации как самодостаточных, так и внешне зависимых концептуальных
+                                                решений. Учитывая ключевые сценарии поведения, консультация с широким
+                                                активом не даёт нам иного выбора, кроме определения приоритизации разума
+                                                над эмоциями.</p>
+                                            <p>Банальные, но неопровержимые выводы, а также ключевые особенности
+                                                структуры проекта, превозмогая сложившуюся непростую экономическую
+                                                ситуацию, заблокированы в рамках своих собственных рациональных
+                                                ограничений.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="feedback__content">
+                                    <div class="feedback__content-item">
+                                        <div class="feedback__content-img">
+                                            <img data-src="images/feedback/feedback1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="feedback__content-item">
+                                        <div class="feedback__content-top">
+                                            <span class="feedback__content-name">Алексей Иванов</span>
+                                            <span class="feedback__content-prof">ПАО “Голубой свет”</span>
+                                        </div>
+
+                                        <div class="feedback__content-text">
+                                            <p>“В частности, понимание сути ресурсосберегающих технологий прекрасно
+                                                подходит для реализации стандартных подходов. “</p>
+                                            <p>Господа, повышение уровня гражданского сознания способствует подготовке и
+                                                реализации как самодостаточных, так и внешне зависимых концептуальных
+                                                решений. Учитывая ключевые сценарии поведения, консультация с широким
+                                                активом не даёт нам иного выбора, кроме определения приоритизации разума
+                                                над эмоциями.</p>
+                                            <p>Банальные, но неопровержимые выводы, а также ключевые особенности
+                                                структуры проекта, превозмогая сложившуюся непростую экономическую
+                                                ситуацию, заблокированы в рамках своих собственных рациональных
+                                                ограничений.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="feedback__content">
+                                    <div class="feedback__content-item">
+                                        <div class="feedback__content-img">
+                                            <img data-src="images/feedback/feedback1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="feedback__content-item">
+                                        <div class="feedback__content-top">
+                                            <span class="feedback__content-name">Алексей Иванов</span>
+                                            <span class="feedback__content-prof">ПАО “Голубой свет”</span>
+                                        </div>
+
+                                        <div class="feedback__content-text">
+                                            <p>“В частности, понимание сути ресурсосберегающих технологий прекрасно
+                                                подходит для реализации стандартных подходов. “</p>
+                                            <p>Господа, повышение уровня гражданского сознания способствует подготовке и
+                                                реализации как самодостаточных, так и внешне зависимых концептуальных
+                                                решений. Учитывая ключевые сценарии поведения, консультация с широким
+                                                активом не даёт нам иного выбора, кроме определения приоритизации разума
+                                                над эмоциями.</p>
+                                            <p>Банальные, но неопровержимые выводы, а также ключевые особенности
+                                                структуры проекта, превозмогая сложившуюся непростую экономическую
+                                                ситуацию, заблокированы в рамках своих собственных рациональных
+                                                ограничений.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-maps">
+        <div class="maps">
+            <div class="maps__wrapper">
+                <div id="map"></div>
+                <div class="container maps-conteiner">
+                    <div class="maps__content">
+                        <div class="maps__content-adres">
+                            <div class="maps__content-adres-item">
+                                <h6 class="maps__content-adres-title">Адрес производства</h6>
+                                <div class="maps__content-adres-text">
+                                    Konya Organize Sanayi Bölgesi Küçükyıldız Sokak No:6 PK.42050 Selçuklu/ Konya/
+                                    TURKEY
+                                </div>
+                            </div>
+                            <div class="maps__content-adres-item">
+                                <h6 class="maps__content-adres-title">Адрес главного представительства в России</h6>
+                                <div class="maps__content-adres-text">
+                                    г. Лобня, ул. <br> Спортивная, д. 4А
+                                </div>
+                            </div>
+                        </div>
+                        <div class="maps__content-contacts">
+                            <a class="maps__content-contacts-tel" href="tel:+71234567890">+7 123 456 7890</a>
+                            <a class="maps__content-contacts-email" href="">info@moniva.ru</a>
+                            <span class="maps__content-contacts-time">ПН-ВС: с 9:00 до 18:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrap">
+
+                <div class="footer__logotip">
+                    <div class="footer__img-logo">
+                        <img data-src="images/icon/header__logotip-footer.png" alt="">
+                    </div>
+                </div>
+                <div class="footer__wrap-right">
+                    <div class="footer__menu">
+                        <nav class="footer__nav">
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-list-item">
+                                    <a class="footer__nav-list-link" href="">Главная</a>
+                                </li>
+                                <li class="footer__nav-list-item">
+                                    <a class="footer__nav-list-link" href="">Каталог</a>
+                                </li>
+                                <li class="footer__nav-list-item">
+                                    <a class="footer__nav-list-link" href="">О компании</a>
+                                </li>
+                            </ul>
+                            <ul class="footer__nav-list">
+                                <li class="footer__nav-list-item">
+                                    <a class="footer__nav-list-link" href="">Сотруднечество</a>
+                                </li>
+                                <li class="footer__nav-list-item">
+                                    <a class="footer__nav-list-link" href="">Гду купить</a>
+                                </li>
+                                <li class="footer__nav-list-item">
+                                    <a class="footer__nav-list-link" href="">Личный кабинет</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="footer__contacts">
+                        <div class="footer__contact">
+                            <a class="footer__content-contact-tel" href="tel:+71234567890">+7 123 456 7890</a>
+                            <a class="footer__content-contact-email" href="">info@moniva.ru</a>
+                            <span class="footer__content-contact-time">ПН-ВС: с 9:00 до 18:00</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
